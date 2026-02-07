@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Store • GameFi Crowdfunding</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="row">
+      <div class="badge">GameFi Store</div>
+      <small class="muted">Dynamic in-app price simulation</small>
+    </div>
+    <div class="links">
+      <a class="btn" href="connect.html">Connect</a>
+      <a class="btn" href="balance.html">Balance</a>
+      <a class="btn" href="campaigns.html">Campaigns</a>
+      <a class="btn" href="create.html">Create</a>
+      <a class="btn" href="./store.html">Store</a>
+    </div>
+  </div>
+
+  <h1>Store</h1>
+  <p>Buy items using GAME tokens. Price changes with activity (game mechanic only).</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="badge">Quick Balances</div>
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <small class="muted">ETH</small>
+          <div id="ethBal">—</div>
+        </div>
+        <div>
+          <small class="muted">GAME</small>
+          <div id="gameBal">—</div>
+        </div>
+      </div>
+      <small class="muted" id="wallet">—</small>
+    </div>
+    <div class="card">
+      <div class="badge">Note</div>
+      <p style="margin-top:10px">
+        Price dynamics are simulated for educational and game mechanics purposes only.
+        The token has no real monetary value and runs on testnet.
+      </p>
+    </div>
+  </div>
+
+  <div id="storeList" class="grid" style="margin-top:16px"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/app.js"></script>
+<script>
+  APP.storeLoad().catch(e => console.log(e));
+</script>
+</body>
+</html>

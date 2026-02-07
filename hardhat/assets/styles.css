@@ -1,0 +1,73 @@
+:root{
+  --bg:#0b0616;
+  --card:#130a2a;
+  --stroke: rgba(255,255,255,.10);
+  --text:#f4f2ff;
+  --muted: rgba(244,242,255,.75);
+  --accent:#a855f7;     /* purple */
+  --accent2:#7c3aed;    /* deeper purple */
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: radial-gradient(1000px 600px at 10% 10%, rgba(168,85,247,.35), transparent 60%),
+  radial-gradient(900px 500px at 90% 20%, rgba(124,58,237,.25), transparent 60%),
+  var(--bg);
+  color:var(--text);
+}
+
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.nav{
+  display:flex; gap:12px; align-items:center; justify-content:space-between;
+  padding:14px 16px; border:1px solid var(--stroke); border-radius:16px;
+  background: rgba(19,10,42,.55); backdrop-filter: blur(10px);
+}
+.nav .links{display:flex; gap:10px; flex-wrap:wrap}
+a.btn, button.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px; border-radius:12px; border:1px solid var(--stroke);
+  background: rgba(255,255,255,.06);
+  color:var(--text); text-decoration:none; cursor:pointer;
+  transition:.18s transform, .18s background, .18s border;
+}
+a.btn:hover, button.btn:hover{
+  transform: translateY(-1px);
+  background: rgba(168,85,247,.18);
+  border-color: rgba(168,85,247,.45);
+}
+a.btn.primary, button.btn.primary{
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: none;
+}
+.grid{display:grid;grid-template-columns: 1fr 1fr; gap:16px; margin-top:16px}
+.card{
+  border:1px solid var(--stroke);
+  background: rgba(19,10,42,.55);
+  border-radius:18px;
+  padding:16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 35px rgba(0,0,0,.35);
+}
+h1{font-size:28px;margin:18px 0 6px}
+p{color:var(--muted);margin:0 0 14px}
+label{display:block;color:var(--muted);font-size:13px;margin:10px 0 6px}
+input, select{
+  width:100%;
+  padding:12px 12px;
+  border-radius:12px;
+  border:1px solid var(--stroke);
+  background: rgba(255,255,255,.05);
+  color:var(--text);
+  outline:none;
+}
+small.muted{color:var(--muted)}
+.badge{
+  display:inline-flex; padding:6px 10px; border-radius:999px;
+  border:1px solid var(--stroke); background: rgba(255,255,255,.06);
+  color:var(--muted); font-size:12px;
+}
+.row{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+hr{border:none;border-top:1px solid var(--stroke);margin:14px 0}
+@media (max-width: 860px){ .grid{grid-template-columns:1fr} }

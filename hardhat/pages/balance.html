@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Balance • GameFi Crowdfunding</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="row">
+      <div class="badge">Balances</div>
+      <small class="muted" id="wallet">—</small>
+    </div>
+    <div class="links">
+      <a class="btn" href="connect.html">Connect</a>
+      <a class="btn" href="./balance.html">Balance</a>
+      <a class="btn" href="campaigns.html">Campaigns</a>
+      <a class="btn" href="create.html">Create</a>
+      <a class="btn" href="store.html">Store</a>
+    </div>
+  </div>
+
+  <h1>Your Wallet</h1>
+  <p>Shows test ETH and internal GAME token balance.</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="badge">ETH</div>
+      <h3 style="margin:10px 0 6px" id="ethBal">—</h3>
+      <small class="muted">Test ETH (Sepolia)</small>
+    </div>
+    <div class="card">
+      <div class="badge">GAME</div>
+      <h3 style="margin:10px 0 6px" id="gameBal">—</h3>
+      <small class="muted">Reward token (in-app utility only)</small>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/app.js"></script>
+<script>
+  APP.loadBalances().catch(e => console.log(e));
+</script>
+</body>
+</html>

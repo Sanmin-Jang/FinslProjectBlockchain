@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Create • GameFi Crowdfunding</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="row">
+      <div class="badge">Create Campaign</div>
+      <small class="muted">Factory deploys new Campaign contracts</small>
+    </div>
+    <div class="links">
+      <a class="btn" href="connect.html">Connect</a>
+      <a class="btn" href="balance.html">Balance</a>
+      <a class="btn" href="campaigns.html">Campaigns</a>
+      <a class="btn" href="./create.html">Create</a>
+      <a class="btn" href="store.html">Store</a>
+    </div>
+  </div>
+
+  <h1>New Campaign</h1>
+  <p>Create a crowdfunding campaign (game project) with goal and duration.</p>
+
+  <div class="card">
+    <label>Title</label>
+    <input id="title" placeholder="New RPG Game" />
+
+    <label>Goal (ETH)</label>
+    <input id="goal" placeholder="1.5" />
+
+    <label>Duration (days)</label>
+    <input id="days" placeholder="7" />
+
+    <div class="row" style="margin-top:14px">
+      <button class="btn primary" onclick="APP.createCampaignUI()">Create</button>
+      <small class="muted" id="status"></small>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

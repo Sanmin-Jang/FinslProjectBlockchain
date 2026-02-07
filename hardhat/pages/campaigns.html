@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campaigns • GameFi Crowdfunding</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="row">
+      <div class="badge">Campaigns</div>
+      <small class="muted">Contribute with MetaMask • Tokens minted automatically</small>
+    </div>
+    <div class="links">
+      <a class="btn" href="connect.html">Connect</a>
+      <a class="btn" href="balance.html">Balance</a>
+      <a class="btn" href="./campaigns.html">Campaigns</a>
+      <a class="btn" href="create.html">Create</a>
+      <a class="btn" href="store.html">Store</a>
+    </div>
+  </div>
+
+  <h1>Active Campaigns</h1>
+  <p>Each contribution mints internal GAME reward tokens (scarcity + early backer bonus).</p>
+
+  <div id="list" class="grid"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="../assets/config.js"></script>
+<script src="../assets/app.js"></script>
+<script>
+  APP.renderCampaigns().catch(e => console.log(e));
+</script>
+</body>
+</html>
